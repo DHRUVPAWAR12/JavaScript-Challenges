@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JavaScript Event Challenges: Challenge 4</title>
+</head>
+<style>
+    .one{ background-color: beige;transition: all 3s;}
+    .two{ background-color: blueviolet;transition: all 3s;}
+    .three{background-color: coral;transition: all 3s;}
+    .four{background-color: darkgoldenrod;transition: all 3s;}
+</style>
+<body>
+    <p> Press the B key to turn page beige</p>
+    <p> Press the V key to turn page blueviolet</p>
+    <p> Press the C key to turn page coral</p>
+    <p> Press the G key to turn page darkgoldenrod</p>
+
+    <script>
+        var bodyTag = document.querySelector('body');
+        document.addEventListener('keydown' , function(event){
+            var keyPressed = event.which;
+
+            switch(keyPressed){
+                case 66:bodyTag.className="one";break;
+                case 86:bodyTag.className="two";break;
+                case 67:bodyTag.className='three';break;
+                case  71:bodyTag.className='four';break;
+
+                default: alert( " YOu didn't  press a specified keys!") ; 
+            }
+        });
+    </script>
+</body>
+</html>
